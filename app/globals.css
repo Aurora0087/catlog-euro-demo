@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #d8d8d4;
+  --foreground: #111111;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #d8d8d4;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(180deg, #d9d9d6 0%, #d0d0cc 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.catalogue-stage {
+  min-height: 100vh;
+}
+
+.catalogue-page {
+  width: min(100%, 210mm);
+  aspect-ratio: 210 / 297;
+  flex-shrink: 0;
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.12),
+    0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.catalogue-display {
+  font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+@media (max-width: 720px) {
+  .catalogue-page {
+    border-radius: 24px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff !important;
+  }
+
+  /* Hide the download button */
+  .no-print {
+    display: none !important;
+  }
+
+  .catalogue-stage {
+    min-height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  /*
+   * Switch the flex wrapper to block so break-after works reliably,
+   * and cover all padding longhand + logical variants that Tailwind v4 may emit.
+   */
+  .catalogue-stage > div {
+    display: block !important;
+    width: 210mm !important;
+    max-width: 210mm !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-block: 0 !important;
+    padding-inline: 0 !important;
+    gap: 0 !important;
+    row-gap: 0 !important;
+    column-gap: 0 !important;
+  }
+
+  .catalogue-page {
+    display: block;
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    margin: 0 !important;
+    padding: 1.2rem 1.6rem !important;
+    padding-block: 1.2rem !important;
+    padding-inline: 1.6rem !important;
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+    /* Force backgrounds (colours, images) to print */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Don't add a blank final page */
+  .catalogue-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
 }
