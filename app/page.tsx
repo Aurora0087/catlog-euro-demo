@@ -112,89 +112,10 @@ const images = {
   blt15: "/imags/belt/14.webp",
   blt16: "/imags/belt/1.webp",
 
-  foot1:"/imags/foot/1.webp",
-  foot2:"/imags/foot/2.webp",
-  foot3:"/imags/foot/3.webp",
-  foot4:"/imags/foot/4.webp",
-  foot5:"/imags/foot/5.webp",
-  foot6:"/imags/foot/6.webp",
-  foot7:"/imags/foot/7.webp",
-  foot8:"/imags/foot/8.webp",
-  foot9:"/imags/foot/9.webp",
-  foot10:"/imags/foot/10.webp",
-  foot11:"/imags/foot/11.webp",
-  foot12:"/imags/foot/12.webp",
-  foot13:"/imags/foot/13.webp",
-  foot14:"/imags/foot/14.webp",
-  foot15:"/imags/foot/15.webp",
-  
-
-  jak1: "/imags/jak/1.webp",
-  jak2: "/imags/jak/2.webp",
-  jak3: "/imags/jak/3.webp",
-  jak4: "/imags/jak/4.webp",
-  jak5: "/imags/jak/5.webp",
-  jak6: "/imags/jak/6.webp",
-  jak7: "/imags/jak/7.webp",
-  jak8: "/imags/jak/8.webp",
-  jak9: "/imags/jak/9.webp",
-  jak10: "/imags/jak/10.webp",
-  jak11: "/imags/jak/11.webp",
-  jak12: "/imags/jak/12.webp",
-  jak13: "/imags/jak/13.webp",
-  jak14: "/imags/jak/14.webp",
-  jak15: "/imags/jak/15.webp",
-
-  hglf1:"/imags/hglf/1.webp",
-  hglf2:"/imags/hglf/2.webp",
-  hglf3:"/imags/hglf/3.webp",
-  hglf4:"/imags/hglf/4.webp",
-  hglf5:"/imags/hglf/5.webp",
-  hglf6:"/imags/hglf/6.webp",
-  hglf7:"/imags/hglf/7.webp",
-  hglf8:"/imags/hglf/8.webp",
-  hglf9:"/imags/hglf/9.webp",
-  hglf10:"/imags/hglf/10.webp",
-  hglf11:"/imags/hglf/11.webp",
-  hglf12:"/imags/hglf/12.webp",
-  hglf13:"/imags/hglf/13.webp",
-  hglf14:"/imags/hglf/14.webp",
-  hglf15:"/imags/hglf/15.webp",
-
-  bagFlatlay:
-    "https://images.pexels.com/photos/4452389/pexels-photo-4452389.jpeg?cs=srgb&dl=pexels-vlada-karpovich-4452389.jpg&fm=jpg",
-  bagMessenger:
-    "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?cs=srgb&dl=pexels-geyonk-1152077.jpg&fm=jpg",
-  bagClutch:
-    "https://images.pexels.com/photos/28028348/pexels-photo-28028348.jpeg?cs=srgb&dl=pexels-ekrulila-28028348.jpg&fm=jpg",
-  bagChair:
-    "https://images.pexels.com/photos/27292676/pexels-photo-27292676.jpeg?cs=srgb&dl=pexels-ekrulila-27292676.jpg&fm=jpg",
   walletClean:
     "https://images.pexels.com/photos/30750448/pexels-photo-30750448.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-30750448.jpg&fm=jpg",
-  walletFlatlay:
-    "https://images.pexels.com/photos/28086433/pexels-photo-28086433.jpeg?cs=srgb&dl=pexels-ekrulila-28086433.jpg&fm=jpg",
   beltBlack:
     "https://images.pexels.com/photos/989938/pexels-photo-989938.jpeg?cs=srgb&dl=pexels-fox-58267-989938.jpg&fm=jpg",
-  beltStyled:
-    "https://images.pexels.com/photos/26851196/pexels-photo-26851196.jpeg?cs=srgb&dl=pexels-ron-lach-26851196.jpg&fm=jpg",
-  shoesBlack:
-    "https://images.pexels.com/photos/27063078/pexels-photo-27063078.jpeg?cs=srgb&dl=pexels-jose-martin-segura-benites-1422456152-27063078.jpg&fm=jpg",
-  shoesSet:
-    "https://images.pexels.com/photos/31935098/pexels-photo-31935098.jpeg?cs=srgb&dl=pexels-mr-abrar-visuals-2151929345-31935098.jpg&fm=jpg",
-  shoesFormal:
-    "https://images.pexels.com/photos/19556446/pexels-photo-19556446.jpeg?cs=srgb&dl=pexels-danyalmalik2770-19556446.jpg&fm=jpg",
-  shoesBrown:
-    "https://images.pexels.com/photos/27608407/pexels-photo-27608407.jpeg?cs=srgb&dl=pexels-jose-martin-segura-benites-1422456152-27608407.jpg&fm=jpg",
-  jacketStone:
-    "https://images.pexels.com/photos/20811216/pexels-photo-20811216.jpeg?cs=srgb&dl=pexels-markrz-20811216.jpg&fm=jpg",
-  jacketNight:
-    "https://images.pexels.com/photos/6553761/pexels-photo-6553761.jpeg?cs=srgb&dl=pexels-omari-6553761.jpg&fm=jpg",
-  jacketClose:
-    "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?cs=srgb&dl=pexels-cottonbro-1040945.jpg&fm=jpg",
-  glovesStudio:
-    "https://images.pexels.com/photos/10147906/pexels-photo-10147906.jpeg?cs=srgb&dl=pexels-rajeshverma-10147906.jpg&fm=jpg",
-  glovesDetail:
-    "https://images.pexels.com/photos/6989529/pexels-photo-6989529.jpeg?cs=srgb&dl=pexels-castorly-stock-6989529.jpg&fm=jpg",
 
   acc1: "/imags/accs/1.webp",
   acc2: "/imags/accs/2.webp",
@@ -2383,7 +2304,7 @@ function WhyChoosePage() {
         </div>
         <div className="flex flex-col justify-between">
           <EditorialImage
-            src={images.bagChair}
+            src={images.bagStudio}
             alt="Why choose us visual"
             label="Brand / Edit"
             position="center center"
