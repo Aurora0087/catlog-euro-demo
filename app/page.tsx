@@ -1007,8 +1007,8 @@ const accessoryProducts: ProductPage[] = [
     category: "Leather Accessories",
     name: "Slim Card Holder",
     artNo: "EI-AC-2387",
-    leatherType: "aniline leather",
-    color: "Green",
+    leatherType: "Smooth Brown Napa Leather",
+    color: "Brown",
     finish: "Burnished Edge",
     description:
       "A minimalist card holder engineered for everyday carry — slim enough to forget you have it.",
@@ -1039,8 +1039,8 @@ const accessoryProducts: ProductPage[] = [
     category: "Leather Accessories",
     name: "Leather Key Holder",
     artNo: "EI-AC-4761",
-    leatherType: "aniline leather",
-    color: "Green",
+    leatherType: "Smooth Napa",
+    color: "Black",
     finish: "Matte Pull-Up",
     description:
       "A compact key holder with swing-out hooks that keep keys silent and scratch-free.",
@@ -1055,8 +1055,8 @@ const accessoryProducts: ProductPage[] = [
     category: "Leather Accessories",
     name: "Toiletry Pouch",
     artNo: "EI-AC-5293",
-    leatherType: "aniline leather",
-    color: "Green",
+    leatherType: "Smooth Napa",
+    color: "Rich Red",
     finish: "Smooth Polished",
     description:
       "A spacious leather toiletry pouch with a waterproof lining — travel-ready and elegantly finished.",
