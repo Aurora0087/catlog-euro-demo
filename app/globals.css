@@ -64,29 +64,46 @@ a {
     margin: 0;
   }
 
+  /* Force backgrounds/images to print everywhere */
+  * {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
   html,
   body {
+    display: block !important;
     margin: 0;
     padding: 0;
     background: #ffffff !important;
-  }
-
-  /* Hide the download button */
-  .no-print {
-    display: none !important;
+    width: 210mm !important;
+    min-height: auto !important;
   }
 
   .catalogue-stage {
     min-height: auto;
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 210mm !important;
+  }
+
+  /* Hide the download button — specificity must beat .catalogue-stage > div (0,1,1) */
+  .catalogue-stage > .no-print {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    top: -9999px !important;
   }
 
   /*
    * Switch the flex wrapper to block so break-after works reliably,
    * and cover all padding longhand + logical variants that Tailwind v4 may emit.
+   * :not(.no-print) excludes the button div so it stays hidden.
    */
-  .catalogue-stage > div {
+  .catalogue-stage > div:not(.no-print) {
     display: block !important;
     width: 210mm !important;
     max-width: 210mm !important;
@@ -104,28 +121,36 @@ a {
   }
 
   .catalogue-page {
-    display: block;
+    display: block !important;
+    position: relative !important;
     width: 210mm !important;
     height: 297mm !important;
-    max-height: 297mm !important;
+    aspect-ratio: auto !important;
+    overflow: visible !important;
     margin: 0 !important;
     padding: 1.2rem 1.6rem !important;
     padding-block: 1.2rem !important;
     padding-inline: 1.6rem !important;
-    border: 0;
+    border: 0 !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     break-after: page;
     page-break-after: always;
-    break-inside: avoid;
-    /* Force backgrounds (colours, images) to print */
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
   }
 
   /* Don't add a blank final page */
   .catalogue-page:last-child {
     break-after: auto;
     page-break-after: auto;
+  }
+
+  /* Ensure fill-images inside pages stay within their containers */
+  .catalogue-page img {
+    max-width: 100%;
+  }
+
+  /* Suppress browser-default behaviour of appending href as text after links */
+  a::after {
+    content: none !important;
   }
 }

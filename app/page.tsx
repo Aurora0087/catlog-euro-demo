@@ -23,9 +23,7 @@ type ProductCategory =
   | "Leather Bag"
   | "Leather Wallet"
   | "Leather Belt"
-  | "Leather Shoes"
-  | "Leather Jacket"
-  | "Leather Gloves";
+  | "Leather Accessories";
 
 type ProductPage = {
   page: number;
@@ -52,58 +50,117 @@ type CollectionOpener = {
 };
 
 const images = {
-  cover: "/imags/EURO BULDING.jpeg",
+  cover: "/imags/EURO BULDING.webp",
   aboutus:
-    "https://images.unsplash.com/photo-1775641487797-ee362ba3b600?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "/imags/aboutus.avif",
   building:
     "https://images.unsplash.com/photo-1771599940657-f9f151abed45?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   artisan: "/imags/width_641.webp",
-  workshop: "/imags/width_800.png",
+  workshop: "/imags/width_800.webp",
   production:
-    "https://images.unsplash.com/photo-1718004438746-4ef85144ee96?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  bagStudio: "/imags/width_670.png",
-  bag1: "/imags/bag1.png",
-  bag1_1: "/imags/bag1_1.png",
-  bag1_2: "/imags/bag1_2.png",
-  bag2: "/imags/bag2.png",
-  bag3: "/imags/bag3.png",
-  bag4: "/imags/bag4.png",
-  bag5: "/imags/bag5.png",
-  bag6: "/imags/bag6.png",
-  bag7: "/imags/bag7.png",
-  bag8: "/imags/bag8.png",
-  bag9: "/imags/bag9.png",
-  bag10: "/imags/bag10.png",
-  bag11: "/imags/bag11.png",
-  bag12: "/imags/bag12.png",
-  bag13: "/imags/bag13.png",
-  bag14: "/imags/bag14.png",
-  bag15: "/imags/bag15.png",
+    "/imags/contact.avif",
 
-  wl1:"/imags/wl1.png",
-  wl2:"/imags/wl2.png",
-  wl3:"/imags/wl3.png",
-  wl4:"/imags/wl4.png",
-  wl5:"/imags/wl5.png",
-  wl6:"/imags/wl6.png",
-  wl7:"/imags/wl7.png",
+  bagStudio: "/imags/width_670.webp",
+  bag1: "/imags/bag/bag1.webp",
+  bag1_1: "/imags/bag/bag1_1.webp",
+  bag1_2: "/imags/bag/bag1_2.webp",
+  bag2: "/imags/bag/bag2.webp",
+  bag3: "/imags/bag/3.webp",
+  bag4: "/imags/bag/4.webp",
+  bag5: "/imags/bag/5.webp",
+  bag6: "/imags/bag/6.webp",
+  bag7: "/imags/bag/7.webp",
+  bag8: "/imags/bag/8.webp",
+  bag9: "/imags/bag/9.webp",
+  bag10: "/imags/bag/10.webp",
+  bag11: "/imags/bag/11.webp",
+  bag12: "/imags/bag/12.webp",
+  bag13: "/imags/bag/13.webp",
+  bag14: "/imags/bag/14.webp",
+  bag15: "/imags/bag/15.webp",
 
-  blt1:"/imags/belt/1_2.png",
-  blt2:"/imags/belt/2.png",
-  blt3:"/imags/belt/3.png",
-  blt4:"/imags/belt/4.png",
-  blt5:"/imags/belt/5.png",
-  blt6:"/imags/belt/6.png",
-  blt7:"/imags/belt/7.png",
-  blt8:"/imags/belt/8.png",
-  blt9:"/imags/belt/9.png",
-  blt10:"/imags/belt/10.png",
-  blt11:"/imags/belt/11.png",
-  blt12:"/imags/belt/12.png",
-  blt13:"/imags/belt/13.png",
-  blt14:"/imags/belt/14.png",
-  blt15:"/imags/belt/15.png",
+  wl1: "/imags/wl1.webp",
+  wl2: "/imags/wlt/2.webp",
+  wl3: "/imags/wlt/3.webp",
+  wl4: "/imags/wlt/4.webp",
+  wl5: "/imags/wlt/5.webp",
+  wl6: "/imags/wlt/6.webp",
+  wl7: "/imags/wlt/7.webp",
+  wl8: "/imags/wlt/8.webp",
+  wl9: "/imags/wlt/9.webp",
+  wl10: "/imags/wlt/10.webp",
+  wl11: "/imags/wlt/11.webp",
+  wl12: "/imags/wlt/12.webp",
+  wl13: "/imags/wlt/13.webp",
+  wl14: "/imags/wlt/16.webp",
+  wl15: "/imags/wlt/15.webp",
+
+  blt1: "/imags/belt/1_2.webp",
+  blt2: "/imags/belt/15.webp",
+  blt3: "/imags/belt/2.webp",
+  blt4: "/imags/belt/3.webp",
+  blt5: "/imags/belt/4.webp",
+  blt6: "/imags/belt/5.webp",
+  blt7: "/imags/belt/6.webp",
+  blt8: "/imags/belt/7.webp",
+  blt9: "/imags/belt/8.webp",
+  blt10: "/imags/belt/9.webp",
+  blt11: "/imags/belt/10.webp",
+  blt12: "/imags/belt/11.webp",
+  blt13: "/imags/belt/12.webp",
+  blt14: "/imags/belt/13.webp",
+  blt15: "/imags/belt/14.webp",
+  blt16: "/imags/belt/1.webp",
+
+  foot1:"/imags/foot/1.webp",
+  foot2:"/imags/foot/2.webp",
+  foot3:"/imags/foot/3.webp",
+  foot4:"/imags/foot/4.webp",
+  foot5:"/imags/foot/5.webp",
+  foot6:"/imags/foot/6.webp",
+  foot7:"/imags/foot/7.webp",
+  foot8:"/imags/foot/8.webp",
+  foot9:"/imags/foot/9.webp",
+  foot10:"/imags/foot/10.webp",
+  foot11:"/imags/foot/11.webp",
+  foot12:"/imags/foot/12.webp",
+  foot13:"/imags/foot/13.webp",
+  foot14:"/imags/foot/14.webp",
+  foot15:"/imags/foot/15.webp",
   
+
+  jak1: "/imags/jak/1.webp",
+  jak2: "/imags/jak/2.webp",
+  jak3: "/imags/jak/3.webp",
+  jak4: "/imags/jak/4.webp",
+  jak5: "/imags/jak/5.webp",
+  jak6: "/imags/jak/6.webp",
+  jak7: "/imags/jak/7.webp",
+  jak8: "/imags/jak/8.webp",
+  jak9: "/imags/jak/9.webp",
+  jak10: "/imags/jak/10.webp",
+  jak11: "/imags/jak/11.webp",
+  jak12: "/imags/jak/12.webp",
+  jak13: "/imags/jak/13.webp",
+  jak14: "/imags/jak/14.webp",
+  jak15: "/imags/jak/15.webp",
+
+  hglf1:"/imags/hglf/1.webp",
+  hglf2:"/imags/hglf/2.webp",
+  hglf3:"/imags/hglf/3.webp",
+  hglf4:"/imags/hglf/4.webp",
+  hglf5:"/imags/hglf/5.webp",
+  hglf6:"/imags/hglf/6.webp",
+  hglf7:"/imags/hglf/7.webp",
+  hglf8:"/imags/hglf/8.webp",
+  hglf9:"/imags/hglf/9.webp",
+  hglf10:"/imags/hglf/10.webp",
+  hglf11:"/imags/hglf/11.webp",
+  hglf12:"/imags/hglf/12.webp",
+  hglf13:"/imags/hglf/13.webp",
+  hglf14:"/imags/hglf/14.webp",
+  hglf15:"/imags/hglf/15.webp",
+
   bagFlatlay:
     "https://images.pexels.com/photos/4452389/pexels-photo-4452389.jpeg?cs=srgb&dl=pexels-vlada-karpovich-4452389.jpg&fm=jpg",
   bagMessenger:
@@ -138,6 +195,15 @@ const images = {
     "https://images.pexels.com/photos/10147906/pexels-photo-10147906.jpeg?cs=srgb&dl=pexels-rajeshverma-10147906.jpg&fm=jpg",
   glovesDetail:
     "https://images.pexels.com/photos/6989529/pexels-photo-6989529.jpeg?cs=srgb&dl=pexels-castorly-stock-6989529.jpg&fm=jpg",
+
+  acc1: "/imags/accs/1.webp",
+  acc2: "/imags/accs/2.webp",
+  acc3: "/imags/accs/3.webp",
+  acc4: "/imags/accs/4.webp",
+  acc5: "/imags/accs/5.webp",
+  acc6: "/imags/accs/6.webp",
+  acc7: "/imags/accs/7.webp",
+  acc8: "/imags/accs/8.webp",
 };
 
 const introPages: IntroPage[] = [
@@ -176,7 +242,7 @@ const introPages: IntroPage[] = [
     imagePosition: "center center",
     body: [
       "We are passionate leather goods manufacturers driven by one belief: real craftsmanship never goes out of style. From our humble beginnings, we've built a reputation for quality by blending traditional techniques with modern design.",
-      "Every product we create—wallets, belts, bags, gloves, and more—is handcrafted by skilled artisans who treat each piece of leather with care and respect. We source only the finest materials, focusing on durability, texture, and timeless appeal.",
+      "Every product we create—bags, wallets, and belts—is handcrafted by skilled artisans who treat each piece of leather with care and respect. We source only the finest materials, focusing on durability, texture, and timeless appeal.",
     ],
   },
 ];
@@ -184,10 +250,10 @@ const introPages: IntroPage[] = [
 const aboutPage = {
   page: 3,
   title: "ABOUT US",
-  image: images.workshop,
+  image: images.bagStudio,
   body: [
     "EURO INTERNATIONAL is a leather goods manufacturing and export house built around clean finishing, dependable production, and strong contemporary presentation.",
-    "From Kolkata, we create bags, wallets, belts, shoes, jackets, and gloves with a product language that balances practical use, commercial value, and elevated visual appeal.",
+    "From Kolkata, we create bags, wallets, and belts with a product language that balances practical use, commercial value, and elevated visual appeal.",
   ],
 };
 
@@ -195,7 +261,8 @@ const summarySections = [
   {
     eyebrow: "01 / Opening",
     title: "Brand Story",
-    description: "An overview of the company, catalogue, and opening product edit.",
+    description:
+      "An overview of the company, catalogue, and opening product edit.",
     items: [
       { page: "02", title: "Summary" },
       { page: "03", title: "About Us" },
@@ -209,17 +276,16 @@ const summarySections = [
     description:
       "The main leather lines presented across the catalogue in a retail-ready sequence.",
     items: [
-      { page: "14", title: "Leather Belt Collection" },
-      { page: "19", title: "Leather Shoes Collection" },
-      { page: "24", title: "Leather Jacket Collection" },
-      { page: "29", title: "Leather Gloves Collection" },
+      { page: "14", title: "Leather Accessories" },
+      { page: "17", title: "Leather Belt Collection" },
     ],
   },
   {
     eyebrow: "03 / Contact",
     title: "Keep In Touch",
-    description: "Direct business details, office address, and workshop information.",
-    items: [{ page: "34", title: "Keep In Touch" }],
+    description:
+      "Direct business details, office address, and workshop information.",
+    items: [{ page: "22", title: "Keep In Touch" }],
   },
 ];
 
@@ -245,27 +311,6 @@ const collectionOpeners: CollectionOpener[] = [
     image: images.beltBlack,
     imagePosition: "center center",
   },
-  {
-    page: 22,
-    category: "Leather Shoes",
-    lines: ["LEATHER", "SHOES"],
-    image: images.shoesBlack,
-    imagePosition: "center center",
-  },
-  {
-    page: 27,
-    category: "Leather Jacket",
-    lines: ["LEATHER", "JACKET"],
-    image: images.jacketStone,
-    imagePosition: "center center",
-  },
-  {
-    page: 32,
-    category: "Leather Gloves",
-    lines: ["LEATHER", "GLOVES"],
-    image: images.glovesStudio,
-    imagePosition: "center center",
-  },
 ];
 
 const bagCoreProducts: ProductPage[] = [
@@ -273,9 +318,9 @@ const bagCoreProducts: ProductPage[] = [
     page: 6,
     category: "Leather Bag",
     name: "Structured Bagpack",
-    artNo: "6/000807-25",
+    artNo: "6/000807-96",
     leatherType: "saffiano",
-    color: "Tan",
+    color: "Brown",
     finish: "Matte Finish",
     description:
       "Minimal structure with a premium surface and a sharp fashion-led silhouette.",
@@ -289,9 +334,9 @@ const bagCoreProducts: ProductPage[] = [
     page: 7,
     category: "Leather Bag",
     name: "Sling Crossbody",
-    artNo: "EI-BG-602",
-    leatherType: "Vegetable Tanned Leather",
-    color: "Natural Brown",
+    artNo: "EI-BG-289",
+    leatherType: "aniline leather",
+    color: "Golden Ochre",
     finish: "Handcrafted Matte",
     description:
       "A compact crossbody shape with artisanal character and easy everyday use.",
@@ -305,9 +350,9 @@ const bagCoreProducts: ProductPage[] = [
     page: 8,
     category: "Leather Bag",
     name: "Messenger Profile",
-    artNo: "EI-BG-603",
-    leatherType: "Full Grain Leather",
-    color: "Classic Camel",
+    artNo: "EI-BG-741",
+    leatherType: "aniline leather",
+    color: "Sage Green",
     finish: "Semi Gloss",
     description:
       "A clean messenger style designed for polished utility and retail appeal.",
@@ -321,9 +366,9 @@ const bagCoreProducts: ProductPage[] = [
     page: 9,
     category: "Leather Bag",
     name: "Modern Clutch",
-    artNo: "EI-BG-604",
+    artNo: "EI-BG-978",
     leatherType: "Soft Nappa Leather",
-    color: "Brown",
+    color: "Charcoal Black",
     finish: "Smooth Touch",
     description:
       "Refined clutch styling with restrained details and a contemporary commercial look.",
@@ -337,9 +382,9 @@ const bagCoreProducts: ProductPage[] = [
     page: 9,
     category: "Leather Bag",
     name: "Bucket Drawstring",
-    artNo: "EI-BG-605",
+    artNo: "EI-BG-359",
     leatherType: "Pebble Grain Leather",
-    color: "Black",
+    color: "Smoky Gray",
     finish: "Glossy Finish",
     description:
       "Slouchy bucket form with a drawstring closure and clean pebble texture throughout.",
@@ -353,9 +398,9 @@ const bagCoreProducts: ProductPage[] = [
     page: 9,
     category: "Leather Bag",
     name: "Structured Tote",
-    artNo: "EI-BG-606",
-    leatherType: "Full Grain Leather",
-    color: "Cognac",
+    artNo: "EI-BG-523",
+    leatherType: "aniline leather",
+    color: "Olive Moss",
     finish: "Burnished Finish",
     description:
       "Generous tote proportions with a rigid base and polished hardware for a boardroom look.",
@@ -369,9 +414,9 @@ const bagCoreProducts: ProductPage[] = [
     page: 9,
     category: "Leather Bag",
     name: "Envelope Shoulder Bag",
-    artNo: "EI-BG-607",
-    leatherType: "Vegetable Tanned Leather",
-    color: "Olive",
+    artNo: "EI-BG-293",
+    leatherType: "aniline leather",
+    color: "Deep Mahogany",
     finish: "Matte Finish",
     description:
       "Envelope-style shoulder bag with a fold-over flap and minimalist edge stitching.",
@@ -388,9 +433,9 @@ const walletCoreProducts: ProductPage[] = [
     page: 12,
     category: "Leather Wallet",
     name: "Classic Bifold",
-    artNo: "EI-WL-1001",
+    artNo: "EI-WL-1696",
     leatherType: "Pull-Up Leather",
-    color: "Cognac",
+    color: "Clay Brown",
     finish: "Natural Patina",
     description:
       "Slim, classic, and commercial. Built for daily carry with a familiar premium handfeel.",
@@ -404,9 +449,9 @@ const walletCoreProducts: ProductPage[] = [
     page: 11,
     category: "Leather Wallet",
     name: "Everyday Wallet",
-    artNo: "EI-WL-1002",
-    leatherType: "Cowhide Leather",
-    color: "Brown",
+    artNo: "EI-WL-1920",
+    leatherType: "aniline leather",
+    color: "black",
     finish: "Soft Grain",
     description:
       "Designed for easy storage, clean proportions, and broad market usability.",
@@ -420,9 +465,9 @@ const walletCoreProducts: ProductPage[] = [
     page: 12,
     category: "Leather Wallet",
     name: "Pocket Card Fold",
-    artNo: "EI-WL-1003",
-    leatherType: "Vegetable Tanned Leather",
-    color: "Whiskey",
+    artNo: "EI-WL-9246",
+    leatherType: "aniline leather",
+    color: "Olive Stone",
     finish: "Dry Matte",
     description:
       "A compact card-focused format with a sharp edge profile and understated styling.",
@@ -436,9 +481,9 @@ const walletCoreProducts: ProductPage[] = [
     page: 13,
     category: "Leather Wallet",
     name: "Travel Wallet",
-    artNo: "EI-WL-1004",
+    artNo: "EI-WL-0598",
     leatherType: "Milled Leather",
-    color: "Deep Brown",
+    color: "Burnt Sienna",
     finish: "Supple Grain",
     description:
       "Long format storage with a neat finish and dependable structure for travel needs.",
@@ -452,9 +497,9 @@ const walletCoreProducts: ProductPage[] = [
     page: 14,
     category: "Leather Wallet",
     name: "Zip Utility Wallet",
-    artNo: "EI-WL-1005",
-    leatherType: "Nappa Leather",
-    color: "Dark Coffee",
+    artNo: "EI-WL-5125",
+    leatherType: "aniline leather",
+    color: "Auburn Clay",
     finish: "Smooth Finish",
     description:
       "Designed for organized carry with a softer luxury feel and a modern finish direction.",
@@ -468,9 +513,9 @@ const walletCoreProducts: ProductPage[] = [
     page: 15,
     category: "Leather Wallet",
     name: "Card Zip Pouch",
-    artNo: "EI-WL-1006",
-    leatherType: "Printed Leather",
-    color: "Black",
+    artNo: "EI-WL-8593",
+    leatherType: "aniline leather",
+    color: "Redwood",
     finish: "Structured Surface",
     description:
       "Compact, neat, and highly giftable for modern accessory capsules and travel edits.",
@@ -484,9 +529,9 @@ const walletCoreProducts: ProductPage[] = [
     page: 15,
     category: "Leather Wallet",
     name: "Slim Money Clip",
-    artNo: "EI-WL-1007",
+    artNo: "EI-WL-7745",
     leatherType: "Vegetable Tanned Leather",
-    color: "Natural Tan",
+    color: "Mocha Gray",
     finish: "Raw Edge Finish",
     description:
       "A stripped-back money clip wallet with a minimal footprint and a confident material story.",
@@ -503,9 +548,9 @@ const beltCoreProducts: ProductPage[] = [
     page: 16,
     category: "Leather Belt",
     name: "Formal Buckle Belt",
-    artNo: "EI-BT-1601",
+    artNo: "EI-BT-6788",
     leatherType: "Full Grain Strap Leather",
-    color: "Black",
+    color: "Black / Yellow ",
     finish: "Polished Edge",
     description:
       "A formal belt developed for clean presentation and strong everyday durability.",
@@ -519,15 +564,15 @@ const beltCoreProducts: ProductPage[] = [
     page: 17,
     category: "Leather Belt",
     name: "Styled Casual Belt",
-    artNo: "EI-BT-1602",
+    artNo: "EI-BT-3726",
     leatherType: "Buff Leather",
-    color: "Brown",
+    color: "Deep Ocean Blue",
     finish: "Natural Look",
     description:
       "A cleaner casual format with visible texture and an understated contemporary mood.",
     details: ["Flexible strap", "Daily wear", "Classic buckle"],
     palette: ["#1c1c1c", "#7e583f", "#ececec"],
-    image: images.blt7,
+    image: images.blt9,
     imageLabel: "Belt / 02",
     imagePosition: "center center",
   },
@@ -535,15 +580,15 @@ const beltCoreProducts: ProductPage[] = [
     page: 18,
     category: "Leather Belt",
     name: "Modern Reversible Belt",
-    artNo: "EI-BT-1603",
+    artNo: "EI-BT-9125",
     leatherType: "Corrected Grain Leather",
-    color: "Black / Brown",
+    color: "Burnt Umber",
     finish: "Dual Surface",
     description:
       "A neat reversible option intended for commercial dressing and gifting programs.",
     details: ["Reversible wear", "Smart hardware", "Balanced profile"],
     palette: ["#111111", "#7d5b40", "#f2f2f2"],
-    image: images.blt8,
+    image: images.blt10,
     imageLabel: "Belt / 03",
     imagePosition: "center center",
   },
@@ -551,15 +596,15 @@ const beltCoreProducts: ProductPage[] = [
     page: 18,
     category: "Leather Belt",
     name: "Wide Waist Belt",
-    artNo: "EI-BT-1604",
+    artNo: "EI-BT-8882",
     leatherType: "Pull-Up Leather",
-    color: "Tan",
+    color: "Rustic Copper",
     finish: "Burnished Edge",
     description:
       "A wider belt silhouette for fashion-forward styling and editorial placement.",
     details: ["Wide strap", "Decorative stitch", "Statement buckle"],
     palette: ["#6b4c2a", "#a07850", "#f5f5f5"],
-    image: images.blt9,
+    image: images.blt11,
     imageLabel: "Belt / 04",
     imagePosition: "center center",
   },
@@ -567,15 +612,15 @@ const beltCoreProducts: ProductPage[] = [
     page: 18,
     category: "Leather Belt",
     name: "Woven Leather Belt",
-    artNo: "EI-BT-1605",
+    artNo: "EI-BT-3386",
     leatherType: "Braided Leather Strip",
-    color: "Brown",
+    color: "Golden Bronze",
     finish: "Natural Woven",
     description:
       "Handwoven leather strips create a tactile surface with a relaxed artisanal feel.",
     details: ["Woven body", "Pin buckle", "Casual profile"],
     palette: ["#4e3520", "#8c6640", "#eeeeee"],
-    image: images.blt10,
+    image: images.blt15,
     imageLabel: "Belt / 05",
     imagePosition: "center center",
   },
@@ -583,15 +628,15 @@ const beltCoreProducts: ProductPage[] = [
     page: 18,
     category: "Leather Belt",
     name: "Slim Formal Belt",
-    artNo: "EI-BT-1606",
+    artNo: "EI-BT-3752",
     leatherType: "Smooth Calf Leather",
-    color: "Dark Brown",
+    color: "Dusty Blush",
     finish: "High Gloss",
     description:
       "A refined narrow belt designed to pair with dress trousers and tailored suiting.",
     details: ["Slim width", "Polished buckle", "Dress cut"],
     palette: ["#2a1a0a", "#6b4428", "#f0f0f0"],
-    image: images.blt11,
+    image: images.blt13,
     imageLabel: "Belt / 06",
     imagePosition: "center center",
   },
@@ -599,361 +644,16 @@ const beltCoreProducts: ProductPage[] = [
     page: 18,
     category: "Leather Belt",
     name: "D-Ring Canvas Belt",
-    artNo: "EI-BT-1607",
+    artNo: "EI-BT-0325",
     leatherType: "Leather-Trimmed Canvas",
-    color: "Khaki",
+    color: "Mauve Taupe",
     finish: "Military Matt",
     description:
       "A utility-inspired belt with leather tabs and a D-ring fastening for a rugged edge.",
     details: ["D-ring closure", "Leather tab", "Adjustable length"],
     palette: ["#5e5835", "#8c7e50", "#e8e8e8"],
-    image: images.blt12,
+    image: images.blt14,
     imageLabel: "Belt / 07",
-    imagePosition: "center center",
-  },
-];
-
-const shoesCoreProducts: ProductPage[] = [
-  {
-    page: 19,
-    category: "Leather Shoes",
-    name: "Black Loafer",
-    artNo: "EI-SH-1901",
-    leatherType: "Embossed Leather",
-    color: "Black",
-    finish: "Textured Finish",
-    description:
-      "A sharp loafer presentation with a modern dress shoe expression.",
-    details: ["Slip-on construction", "Metal trim", "Croc texture"],
-    palette: ["#111111", "#6f6f6f", "#ececec"],
-    image: images.shoesBlack,
-    imageLabel: "Shoes / 01",
-    imagePosition: "center center",
-  },
-  {
-    page: 20,
-    category: "Leather Shoes",
-    name: "Formal Shoe Set",
-    artNo: "EI-SH-1902",
-    leatherType: "Leather / Suede Mix",
-    color: "Black / Brown",
-    finish: "Mixed Surface",
-    description:
-      "A curated formal assortment with contrast, variety, and clean showroom appeal.",
-    details: ["Multiple styles", "Dress finish", "Retail-ready display"],
-    palette: ["#111111", "#815b43", "#f0f0f0"],
-    image: images.shoesSet,
-    imageLabel: "Shoes / 02",
-    imagePosition: "center center",
-  },
-  {
-    page: 21,
-    category: "Leather Shoes",
-    name: "Formal Bit Loafer",
-    artNo: "EI-SH-1903",
-    leatherType: "Smooth Leather",
-    color: "Black",
-    finish: "Semi Gloss",
-    description:
-      "A refined black formal shoe with a classic bit detail and a clean last shape.",
-    details: ["Bit hardware", "Soft upper", "Low profile sole"],
-    palette: ["#0d0d0d", "#4f4f4f", "#ededed"],
-    image: images.shoesFormal,
-    imageLabel: "Shoes / 03",
-    imagePosition: "center center",
-  },
-  {
-    page: 21,
-    category: "Leather Shoes",
-    name: "Brown Derby Shoe",
-    artNo: "EI-SH-1904",
-    leatherType: "Burnished Calf Leather",
-    color: "Cognac Brown",
-    finish: "Hand Burnished",
-    description:
-      "A timeless derby silhouette with a rich burnished finish and clean broguing details.",
-    details: ["Open lacing", "Brogue punch", "Leather sole"],
-    palette: ["#6b3a1f", "#a06035", "#f5f0eb"],
-    image: images.shoesBrown,
-    imageLabel: "Shoes / 04",
-    imagePosition: "center center",
-  },
-  {
-    page: 21,
-    category: "Leather Shoes",
-    name: "Oxford Cap Toe",
-    artNo: "EI-SH-1905",
-    leatherType: "Polished Calf Leather",
-    color: "Black",
-    finish: "Mirror Polish",
-    description:
-      "A sharp cap-toe oxford for professional dress codes and formal styling.",
-    details: ["Closed lacing", "Cap toe detail", "Goodyear welt"],
-    palette: ["#0a0a0a", "#3d3d3d", "#f0f0f0"],
-    image: images.shoesBlack,
-    imageLabel: "Shoes / 05",
-    imagePosition: "center center",
-  },
-  {
-    page: 21,
-    category: "Leather Shoes",
-    name: "Suede Chelsea Boot",
-    artNo: "EI-SH-1906",
-    leatherType: "Suede Leather",
-    color: "Camel",
-    finish: "Brushed Suede",
-    description:
-      "A clean chelsea silhouette in camel suede with elastic gussets for effortless wear.",
-    details: ["Elastic gusset", "Pull tab", "Stacked heel"],
-    palette: ["#b58050", "#d4a870", "#f8f0e0"],
-    image: images.shoesSet,
-    imageLabel: "Shoes / 06",
-    imagePosition: "center center",
-  },
-  {
-    page: 21,
-    category: "Leather Shoes",
-    name: "Monk Strap Formal",
-    artNo: "EI-SH-1907",
-    leatherType: "Smooth Grain Leather",
-    color: "Dark Brown",
-    finish: "Satin Gloss",
-    description:
-      "A single-buckle monk strap with a sleek profile ideal for boardroom and event wear.",
-    details: ["Buckle closure", "Square toe", "Leather lining"],
-    palette: ["#2a1200", "#6a3818", "#eeeeee"],
-    image: images.shoesFormal,
-    imageLabel: "Shoes / 07",
-    imagePosition: "center center",
-  },
-];
-
-const jacketCoreProducts: ProductPage[] = [
-  {
-    page: 22,
-    category: "Leather Jacket",
-    name: "Stone Wall Rider",
-    artNo: "EI-JK-2201",
-    leatherType: "Sheep Nappa Leather",
-    color: "Black",
-    finish: "Soft Shine",
-    description:
-      "A classic rider profile with clean proportions and a strong fashion-forward presence.",
-    details: ["Front zip", "Structured collar", "Modern fit"],
-    palette: ["#111111", "#5d5d5d", "#efefef"],
-    image: images.jacketStone,
-    imageLabel: "Jacket / 01",
-    imagePosition: "center center",
-  },
-  {
-    page: 23,
-    category: "Leather Jacket",
-    name: "Night Street Jacket",
-    artNo: "EI-JK-2202",
-    leatherType: "Soft Lamb Leather",
-    color: "Black",
-    finish: "Smooth Matte",
-    description:
-      "A moodier city-driven style with an understated premium surface and sharp silhouette.",
-    details: ["Urban styling", "Lightweight body", "Soft handfeel"],
-    palette: ["#0f0f0f", "#676767", "#f1f1f1"],
-    image: images.jacketNight,
-    imageLabel: "Jacket / 02",
-    imagePosition: "center center",
-  },
-  {
-    page: 24,
-    category: "Leather Jacket",
-    name: "Minimal Zip Jacket",
-    artNo: "EI-JK-2203",
-    leatherType: "Cow Leather",
-    color: "Black",
-    finish: "Clean Surface",
-    description:
-      "Reduced detailing and a sleek line make this jacket easy to place in modern collections.",
-    details: ["Minimal front", "Clean paneling", "Commercial fit"],
-    palette: ["#171717", "#575757", "#f3f3f3"],
-    image: images.jacketClose,
-    imageLabel: "Jacket / 03",
-    imagePosition: "center center",
-  },
-  {
-    page: 24,
-    category: "Leather Jacket",
-    name: "Oversized Biker Jacket",
-    artNo: "EI-JK-2204",
-    leatherType: "Buffalo Leather",
-    color: "Dark Brown",
-    finish: "Worn Matte",
-    description:
-      "An oversized biker cut with relaxed shoulders and a raw, lived-in leather character.",
-    details: ["Relaxed fit", "Zip cuffs", "Multi-pocket"],
-    palette: ["#1e0e04", "#5a3018", "#f0ece8"],
-    image: images.jacketStone,
-    imageLabel: "Jacket / 04",
-    imagePosition: "center center",
-  },
-  {
-    page: 24,
-    category: "Leather Jacket",
-    name: "Racer Bomber",
-    artNo: "EI-JK-2205",
-    leatherType: "Nappa Leather",
-    color: "Black",
-    finish: "Stretch Matte",
-    description:
-      "A bomber silhouette with a racer collar and a clean stretch-fit leather surface.",
-    details: ["Rib hem", "Front zip", "Inner lining"],
-    palette: ["#0d0d0d", "#555555", "#f2f2f2"],
-    image: images.jacketNight,
-    imageLabel: "Jacket / 05",
-    imagePosition: "center center",
-  },
-  {
-    page: 24,
-    category: "Leather Jacket",
-    name: "Tailored Leather Blazer",
-    artNo: "EI-JK-2206",
-    leatherType: "Lamb Leather",
-    color: "Black",
-    finish: "Fine Grain",
-    description:
-      "A structured leather blazer that bridges fashion and formalwear with refined tailoring.",
-    details: ["Notch lapel", "Two-button", "Fitted silhouette"],
-    palette: ["#131313", "#505050", "#f3f3f3"],
-    image: images.jacketClose,
-    imageLabel: "Jacket / 06",
-    imagePosition: "center center",
-  },
-  {
-    page: 24,
-    category: "Leather Jacket",
-    name: "Moto Shirt Jacket",
-    artNo: "EI-JK-2207",
-    leatherType: "Washed Sheep Leather",
-    color: "Olive Green",
-    finish: "Washed Distressed",
-    description:
-      "A casual leather overshirt jacket with a relaxed moto feel and washed surface texture.",
-    details: ["Shirt collar", "Chest pockets", "Drop shoulder"],
-    palette: ["#2d3b1a", "#5a6e38", "#eceee8"],
-    image: images.jacketStone,
-    imageLabel: "Jacket / 07",
-    imagePosition: "center center",
-  },
-];
-
-const glovesCoreProducts: ProductPage[] = [
-  {
-    page: 25,
-    category: "Leather Gloves",
-    name: "Editorial Leather Gloves",
-    artNo: "EI-GL-2501",
-    leatherType: "Sheep Leather",
-    color: "Black",
-    finish: "Glossy Soft Finish",
-    description:
-      "Elegant gloves with a polished surface and a clear fashion presentation.",
-    details: ["Slim shape", "Dress styling", "Smooth finish"],
-    palette: ["#101010", "#4f4f4f", "#ededed"],
-    image: images.glovesStudio,
-    imageLabel: "Gloves / 01",
-    imagePosition: "center center",
-  },
-  {
-    page: 26,
-    category: "Leather Gloves",
-    name: "Studio Glove Detail",
-    artNo: "EI-GL-2502",
-    leatherType: "Fine Nappa Leather",
-    color: "Black",
-    finish: "Supple Finish",
-    description:
-      "Soft leather gloves with a cleaner refined look suited to premium winter accessories.",
-    details: ["Soft drape", "Luxury look", "Premium touch"],
-    palette: ["#0f0f0f", "#6b6b6b", "#efefef"],
-    image: images.glovesDetail,
-    imageLabel: "Gloves / 02",
-    imagePosition: "center center",
-  },
-  {
-    page: 27,
-    category: "Leather Gloves",
-    name: "Classic Dress Gloves",
-    artNo: "EI-GL-2503",
-    leatherType: "Goat Leather",
-    color: "Black",
-    finish: "Smooth Matte",
-    description:
-      "Classic glove styling with strong visual neatness and dependable category appeal.",
-    details: ["Dress glove profile", "Neat seam finish", "Balanced structure"],
-    palette: ["#111111", "#505050", "#f0f0f0"],
-    image: images.glovesStudio,
-    imageLabel: "Gloves / 03",
-    imagePosition: "center top",
-  },
-  {
-    page: 27,
-    category: "Leather Gloves",
-    name: "Lined Winter Gloves",
-    artNo: "EI-GL-2504",
-    leatherType: "Sheep Leather",
-    color: "Dark Brown",
-    finish: "Soft Suede Inner",
-    description:
-      "Warmly lined leather gloves with a classic outer shell and a premium interior feel.",
-    details: ["Fleece lined", "Wrist snap", "Thermal comfort"],
-    palette: ["#2c1a0a", "#6e4028", "#f0ece8"],
-    image: images.glovesDetail,
-    imageLabel: "Gloves / 04",
-    imagePosition: "center center",
-  },
-  {
-    page: 27,
-    category: "Leather Gloves",
-    name: "Fingerless Leather Gloves",
-    artNo: "EI-GL-2505",
-    leatherType: "Nappa Leather",
-    color: "Black",
-    finish: "Soft Matte",
-    description:
-      "Open-finger gloves designed for practical daily use with a contemporary edge.",
-    details: ["Open fingers", "Snap wrist", "Minimal stitching"],
-    palette: ["#111111", "#484848", "#f2f2f2"],
-    image: images.glovesStudio,
-    imageLabel: "Gloves / 05",
-    imagePosition: "center center",
-  },
-  {
-    page: 27,
-    category: "Leather Gloves",
-    name: "Driving Gloves",
-    artNo: "EI-GL-2506",
-    leatherType: "Peccary Leather",
-    color: "Tan",
-    finish: "Perforated Panel",
-    description:
-      "Heritage driving gloves with knuckle cutouts and a snug grip-fit for style and control.",
-    details: ["Knuckle cutout", "Snap buckle", "Grip palm"],
-    palette: ["#b08050", "#d4a870", "#f8f4ec"],
-    image: images.glovesDetail,
-    imageLabel: "Gloves / 06",
-    imagePosition: "center center",
-  },
-  {
-    page: 27,
-    category: "Leather Gloves",
-    name: "Touchscreen Gloves",
-    artNo: "EI-GL-2507",
-    leatherType: "Nappa Leather",
-    color: "Black",
-    finish: "Conductive Tip",
-    description:
-      "Smart leather gloves with touchscreen-compatible fingertips for seamless modern use.",
-    details: ["Touch tip", "Slim fit", "Cashmere lined"],
-    palette: ["#0d0d0d", "#3f3f3f", "#efefef"],
-    image: images.glovesStudio,
-    imageLabel: "Gloves / 07",
     imagePosition: "center center",
   },
 ];
@@ -964,9 +664,9 @@ const bagExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Bag",
     name: "Zip-Top Tote",
-    artNo: "EI-BG-608",
-    leatherType: "Vegetable Tanned Leather",
-    color: "Camel",
+    artNo: "EI-BG-969",
+    leatherType: "aniline leather",
+    color: "Misty Blue",
     finish: "Natural Matte",
     description:
       "A generous zip-top silhouette with a clean structure and versatile commercial profile.",
@@ -980,9 +680,9 @@ const bagExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Bag",
     name: "Mini Frame Bag",
-    artNo: "EI-BG-609",
-    leatherType: "Saffiano Leather",
-    color: "Black",
+    artNo: "EI-BG-673",
+    leatherType: "aniline leather",
+    color: "Walnut Brown",
     finish: "Cross-Grain Texture",
     description:
       "Compact frame bag with a rigid top and snap-frame closure for clean editorial appeal.",
@@ -996,9 +696,9 @@ const bagExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Bag",
     name: "Box Clutch",
-    artNo: "EI-BG-610",
+    artNo: "EI-BG-415",
     leatherType: "Smooth Calf Leather",
-    color: "Ivory",
+    color: "Graphite Brown",
     finish: "Polished Smooth",
     description:
       "Structured box clutch with a push-lock closure and minimal edge stitching.",
@@ -1012,9 +712,9 @@ const bagExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Bag",
     name: "Saddle Bag",
-    artNo: "EI-BG-611",
+    artNo: "EI-BG-860",
     leatherType: "Full Grain Leather",
-    color: "Cognac",
+    color: "Cocoa Brown",
     finish: "Hand-Burnished",
     description:
       "Heritage saddle profile with a curved flap, clean stitch lines, and a contemporary crossbody strap.",
@@ -1028,9 +728,9 @@ const bagExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Bag",
     name: "Drawstring Shopper",
-    artNo: "EI-BG-612",
+    artNo: "EI-BG-563",
     leatherType: "Pebble Grain Leather",
-    color: "Stone",
+    color: "Midnight Forest",
     finish: "Soft Pebble",
     description:
       "Relaxed drawstring shopper with an oversized profile and minimal branded hardware.",
@@ -1048,15 +748,15 @@ const beltExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Belt",
     name: "Western Stitch Belt",
-    artNo: "EI-BT-1608",
+    artNo: "EI-BT-5112",
     leatherType: "Full Grain Leather",
-    color: "Brown",
+    color: "Autumn Rust",
     finish: "Saddle Wax",
     description:
       "Western-inspired belt with decorative stitching and an antique brass oval buckle.",
     details: ["Western stitching", "Oval buckle", "Edge paint"],
     palette: ["#6b4020", "#9e6535", "#f5ede0"],
-    image: images.blt13,
+    image: images.blt16,
     imageLabel: "Belt / 08",
     imagePosition: "center center",
   },
@@ -1064,15 +764,15 @@ const beltExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Belt",
     name: "Slim Dress Belt",
-    artNo: "EI-BT-1609",
+    artNo: "EI-BT-8221",
     leatherType: "Smooth Calf Leather",
-    color: "Black",
+    color: "Saddle Rust",
     finish: "High Polish",
     description:
       "Ultra-slim belt cut for dress suiting and formal occasions with a polished nickle buckle.",
     details: ["20mm width", "Nickel buckle", "Dress holes"],
     palette: ["#0a0a0a", "#3d3d3d", "#f0f0f0"],
-    image: images.bag14,
+    image: images.blt2,
     imageLabel: "Belt / 09",
     imagePosition: "center center",
   },
@@ -1080,15 +780,15 @@ const beltExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Belt",
     name: "Braided Ring Belt",
-    artNo: "EI-BT-1610",
-    leatherType: "Braided Leather Strip",
-    color: "Tan",
+    artNo: "EI-BT-4820",
+    leatherType: "aniline leather",
+    color: "Dark Burgundy",
     finish: "Natural Woven",
     description:
       "Double-ring buckle belt with a hand-braided leather body and a casual relaxed silhouette.",
     details: ["Double ring", "Braided body", "No-hole adjustable"],
     palette: ["#c09060", "#e8b878", "#f8f0e0"],
-    image: images.beltStyled,
+    image: images.blt3,
     imageLabel: "Belt / 10",
     imagePosition: "center center",
   },
@@ -1096,15 +796,15 @@ const beltExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Belt",
     name: "Snap Utility Belt",
-    artNo: "EI-BT-1611",
+    artNo: "EI-BT-0557",
     leatherType: "Buff Leather",
-    color: "Dark Brown",
+    color: "Cocoa Ash",
     finish: "Military Matt",
     description:
       "Sturdy utility belt with a snap-pin buckle designed for everyday workwear and casual dressing.",
     details: ["Snap buckle", "Wide width", "Reinforced holes"],
     palette: ["#2a1800", "#6a3c18", "#eeeeee"],
-    image: images.beltBlack,
+    image: images.blt4,
     imageLabel: "Belt / 11",
     imagePosition: "center center",
   },
@@ -1112,100 +812,16 @@ const beltExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Belt",
     name: "Statement Buckle Belt",
-    artNo: "EI-BT-1612",
+    artNo: "EI-BT-4274",
     leatherType: "Pull-Up Leather",
-    color: "Camel",
+    color: "Honey Gold",
     finish: "Burnished Wax",
     description:
       "Wide fashion belt anchored by an oversized vintage-brass rectangular buckle.",
     details: ["Oversized buckle", "Wide cut", "Burnished pull-up"],
     palette: ["#c8983a", "#e8c060", "#f8f0d8"],
-    image: images.beltStyled,
+    image: images.blt5,
     imageLabel: "Belt / 12",
-    imagePosition: "center center",
-  },
-];
-
-const shoesExtraProducts: ProductPage[] = [
-  // --- Leather Shoes extras ---
-  {
-    page: 0,
-    category: "Leather Shoes",
-    name: "Penny Loafer",
-    artNo: "EI-SH-1908",
-    leatherType: "Smooth Calf Leather",
-    color: "Black",
-    finish: "Gloss Burnish",
-    description:
-      "A clean penny loafer with a flat saddle and a refined round toe for professional wear.",
-    details: ["Penny slot", "Leather sole", "Slip-on"],
-    palette: ["#0a0a0a", "#3d3d3d", "#f0f0f0"],
-    image: images.shoesBlack,
-    imageLabel: "Shoes / 08",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Shoes",
-    name: "Wingtip Oxford",
-    artNo: "EI-SH-1909",
-    leatherType: "Burnished Calf Leather",
-    color: "Tan",
-    finish: "Antique Burnish",
-    description:
-      "Classic wingtip broguing on a clean oxford last — a commercial staple for dress footwear programs.",
-    details: ["Wingtip brogue", "Closed lacing", "Leather sole"],
-    palette: ["#b07840", "#d4a060", "#f8f0e0"],
-    image: images.shoesBrown,
-    imageLabel: "Shoes / 09",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Shoes",
-    name: "Slip-On Mule",
-    artNo: "EI-SH-1910",
-    leatherType: "Smooth Nappa Leather",
-    color: "Black",
-    finish: "Semi Gloss",
-    description:
-      "Backless slip-on mule with a low block heel and a sleek pointed toe for fashion-led collections.",
-    details: ["Backless design", "Block heel", "Pointed toe"],
-    palette: ["#111111", "#555555", "#eeeeee"],
-    image: images.shoesFormal,
-    imageLabel: "Shoes / 10",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Shoes",
-    name: "Ankle Boot",
-    artNo: "EI-SH-1911",
-    leatherType: "Full Grain Leather",
-    color: "Dark Brown",
-    finish: "Matte Wax",
-    description:
-      "Clean ankle boot with a side zip, stacked heel, and a rounded toe for broad seasonal placement.",
-    details: ["Side zip", "Stacked heel", "Leather lining"],
-    palette: ["#2a1200", "#6a3818", "#eeeeee"],
-    image: images.shoesSet,
-    imageLabel: "Shoes / 11",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Shoes",
-    name: "Platform Derby",
-    artNo: "EI-SH-1912",
-    leatherType: "Polished Calf Leather",
-    color: "Black",
-    finish: "High Gloss",
-    description:
-      "Fashion-forward platform derby with an exaggerated sole unit and open lacing for editorial placement.",
-    details: ["Platform sole", "Open lacing", "Padded insole"],
-    palette: ["#0a0a0a", "#4a4a4a", "#f0f0f0"],
-    image: images.shoesBlack,
-    imageLabel: "Shoes / 12",
     imagePosition: "center center",
   },
 ];
@@ -1216,15 +832,15 @@ const walletExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Wallet",
     name: "Passport Holder",
-    artNo: "EI-WL-1008",
+    artNo: "EI-WL-0419",
     leatherType: "Full Grain Leather",
-    color: "Tan",
+    color: "Coffee Bean",
     finish: "Natural Patina",
     description:
       "Travel passport holder with document pockets and a clean spine for easy passport access.",
     details: ["Passport slot", "Card pockets", "Document sleeve"],
     palette: ["#b08040", "#d4a860", "#f8f0e0"],
-    image: images.walletFlatlay,
+    image: images.wl8,
     imageLabel: "Wallet / 08",
     imagePosition: "center center",
   },
@@ -1232,15 +848,15 @@ const walletExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Wallet",
     name: "Long Envelope Wallet",
-    artNo: "EI-WL-1009",
-    leatherType: "Smooth Calf Leather",
-    color: "Black",
+    artNo: "EI-WL-6096",
+    leatherType: "aniline leather",
+    color: "Copper Orange",
     finish: "Matte Finish",
     description:
       "Long envelope-style wallet with a magnetic snap closure and generous internal organization.",
     details: ["Magnetic snap", "Bill section", "8 card slots"],
     palette: ["#111111", "#4a4a4a", "#f0f0f0"],
-    image: images.walletClean,
+    image: images.wl9,
     imageLabel: "Wallet / 09",
     imagePosition: "center center",
   },
@@ -1248,15 +864,15 @@ const walletExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Wallet",
     name: "Mini Card Wallet",
-    artNo: "EI-WL-1010",
-    leatherType: "Vegetable Tanned Leather",
-    color: "Natural Tan",
+    artNo: "EI-WL-7757",
+    leatherType: "aniline leather",
+    color: "Gunmetal Gray",
     finish: "Raw Edge",
     description:
       "Minimal four-slot card wallet with a center fold and a raw edge finish for a refined artisan look.",
     details: ["4 card slots", "Center fold", "Raw edge"],
     palette: ["#c09060", "#e8b878", "#f8f0e0"],
-    image: images.walletFlatlay,
+    image: images.wl10,
     imageLabel: "Wallet / 10",
     imagePosition: "center center",
   },
@@ -1264,15 +880,15 @@ const walletExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Wallet",
     name: "Key Coin Pouch",
-    artNo: "EI-WL-1011",
+    artNo: "EI-WL-9599",
     leatherType: "Nappa Leather",
-    color: "Dark Brown",
+    color: "Dark Cocoa",
     finish: "Soft Grain",
     description:
       "Small coin and key pouch with a ring attachment and a zip closure for compact daily carry.",
     details: ["Key ring", "Zip closure", "Coin pocket"],
     palette: ["#2a1200", "#6a3818", "#f0ece8"],
-    image: images.walletClean,
+    image: images.wl11,
     imageLabel: "Wallet / 11",
     imagePosition: "center center",
   },
@@ -1280,184 +896,16 @@ const walletExtraProducts: ProductPage[] = [
     page: 0,
     category: "Leather Wallet",
     name: "Trifold Wallet",
-    artNo: "EI-WL-1012",
+    artNo: "EI-WL-6863",
     leatherType: "Pull-Up Leather",
-    color: "Cognac",
+    color: "Ash Gray",
     finish: "Natural Pull-Up",
     description:
       "Classic trifold with visible pull-up aging character, ample card slots, and a coin pocket.",
     details: ["Trifold", "Coin pocket", "6 card slots"],
     palette: ["#9a6535", "#c8934f", "#f5ede0"],
-    image: images.walletFlatlay,
+    image: images.wl12,
     imageLabel: "Wallet / 12",
-    imagePosition: "center center",
-  },
-];
-
-const jacketExtraProducts: ProductPage[] = [
-  // --- Leather Jacket extras ---
-  {
-    page: 0,
-    category: "Leather Jacket",
-    name: "Cropped Biker",
-    artNo: "EI-JK-2208",
-    leatherType: "Lamb Leather",
-    color: "Black",
-    finish: "Supple Matte",
-    description:
-      "A cropped biker cut sitting at the waist — directional silhouette for contemporary women's collections.",
-    details: ["Cropped length", "Front zip", "Snap cuffs"],
-    palette: ["#111111", "#4a4a4a", "#f0f0f0"],
-    image: images.jacketClose,
-    imageLabel: "Jacket / 08",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Jacket",
-    name: "Double Breast Blazer",
-    artNo: "EI-JK-2209",
-    leatherType: "Smooth Calf Leather",
-    color: "Black",
-    finish: "Clean Surface",
-    description:
-      "Double-breasted leather blazer with wide lapels and a structured body for fashion-forward tailoring.",
-    details: ["DB closure", "Wide lapel", "Structured body"],
-    palette: ["#131313", "#505050", "#f3f3f3"],
-    image: images.jacketStone,
-    imageLabel: "Jacket / 09",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Jacket",
-    name: "Shearling Trim Jacket",
-    artNo: "EI-JK-2210",
-    leatherType: "Sheep Leather",
-    color: "Dark Brown",
-    finish: "Shearling Interior",
-    description:
-      "Rider jacket with shearling collar trim and cuff lining for a premium winter-season profile.",
-    details: ["Shearling trim", "Warm lining", "Zip front"],
-    palette: ["#1e0e04", "#5a3018", "#f0ece8"],
-    image: images.jacketNight,
-    imageLabel: "Jacket / 10",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Jacket",
-    name: "Band Collar Jacket",
-    artNo: "EI-JK-2211",
-    leatherType: "Cow Leather",
-    color: "Black",
-    finish: "Washed Matte",
-    description:
-      "Band-collar zip jacket with clean paneling and a relaxed contemporary fit for modern streetwear.",
-    details: ["Band collar", "Washed finish", "Relaxed fit"],
-    palette: ["#171717", "#575757", "#f3f3f3"],
-    image: images.jacketClose,
-    imageLabel: "Jacket / 11",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Jacket",
-    name: "Zip Field Jacket",
-    artNo: "EI-JK-2212",
-    leatherType: "Buffalo Leather",
-    color: "Olive",
-    finish: "Military Wax",
-    description:
-      "Field-style leather jacket with cargo pockets and a military wax finish for a utility edge.",
-    details: ["Cargo pockets", "Military finish", "Straight hem"],
-    palette: ["#2d3b1a", "#5a6e38", "#eceee8"],
-    image: images.jacketStone,
-    imageLabel: "Jacket / 12",
-    imagePosition: "center center",
-  },
-];
-
-const glovesExtraProducts: ProductPage[] = [
-  // --- Leather Gloves extras ---
-  {
-    page: 0,
-    category: "Leather Gloves",
-    name: "Long Opera Gloves",
-    artNo: "EI-GL-2508",
-    leatherType: "Fine Nappa Leather",
-    color: "Black",
-    finish: "Glossy Silk Finish",
-    description:
-      "Elbow-length opera gloves in fine nappa for editorial fashion shoots and evening-wear collections.",
-    details: ["Elbow length", "Silk lining", "Dress styling"],
-    palette: ["#0d0d0d", "#3f3f3f", "#efefef"],
-    image: images.glovesStudio,
-    imageLabel: "Gloves / 08",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Gloves",
-    name: "Half Finger Gloves",
-    artNo: "EI-GL-2509",
-    leatherType: "Nappa Leather",
-    color: "Dark Brown",
-    finish: "Soft Matte",
-    description:
-      "Open-finger gloves with knuckle cutouts and a padded palm for practical urban use.",
-    details: ["Half finger", "Padded palm", "Adjustable wrist"],
-    palette: ["#2c1a0a", "#6e4028", "#f0ece8"],
-    image: images.glovesDetail,
-    imageLabel: "Gloves / 09",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Gloves",
-    name: "Padded Moto Gloves",
-    artNo: "EI-GL-2510",
-    leatherType: "Cowhide Leather",
-    color: "Black",
-    finish: "Textured Surface",
-    description:
-      "Moto-inspired gloves with knuckle padding and a wrist strap for a strong utilitarian presence.",
-    details: ["Knuckle pad", "Wrist strap", "Textured back"],
-    palette: ["#111111", "#484848", "#f2f2f2"],
-    image: images.glovesStudio,
-    imageLabel: "Gloves / 10",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Gloves",
-    name: "Shearling Cuff Gloves",
-    artNo: "EI-GL-2511",
-    leatherType: "Sheep Leather",
-    color: "Tan",
-    finish: "Shearling Cuff",
-    description:
-      "Warm winter gloves with an oversized shearling cuff and a snug fitted palm.",
-    details: ["Shearling cuff", "Fleece lined", "Snap close"],
-    palette: ["#c09060", "#e8b878", "#f8f0e0"],
-    image: images.glovesDetail,
-    imageLabel: "Gloves / 11",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Gloves",
-    name: "Ruched Detail Gloves",
-    artNo: "EI-GL-2512",
-    leatherType: "Goat Leather",
-    color: "Black",
-    finish: "Ruched Surface",
-    description:
-      "Feminine ruched-back gloves with a gathered leather detail and a slim wrist silhouette.",
-    details: ["Ruched back", "Slim wrist", "Dress length"],
-    palette: ["#0f0f0f", "#4a4a4a", "#eeeeee"],
-    image: images.glovesStudio,
-    imageLabel: "Gloves / 12",
     imagePosition: "center center",
   },
 ];
@@ -1468,9 +916,9 @@ const bagTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Bag",
     name: "Hobo Shoulder Bag",
-    artNo: "EI-BG-613",
-    leatherType: "Soft Pebble Leather",
-    color: "Caramel",
+    artNo: "EI-BG-294",
+    leatherType: "aniline leather",
+    color: "Espresso Brown",
     finish: "Pebble Matte",
     description:
       "Slouchy hobo silhouette with a single shoulder strap and an unstructured interior for relaxed daily use.",
@@ -1484,9 +932,9 @@ const bagTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Bag",
     name: "Convertible Backpack",
-    artNo: "EI-BG-614",
+    artNo: "EI-BG-226",
     leatherType: "Full Grain Leather",
-    color: "Dark Brown",
+    color: "Forest Slate",
     finish: "Wax Finish",
     description:
       "Versatile backpack that converts to a shoulder carry, built for commercial travel and weekend use.",
@@ -1500,9 +948,9 @@ const bagTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Bag",
     name: "Mini Crossbody",
-    artNo: "EI-BG-615",
+    artNo: "EI-BG-302",
     leatherType: "Smooth Nappa Leather",
-    color: "Black",
+    color: "Rustic Chestnut",
     finish: "Gloss Smooth",
     description:
       "Compact mini crossbody with a chain strap and a polished flap closure for evening or day use.",
@@ -1519,15 +967,15 @@ const walletTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Wallet",
     name: "Phone Wallet Case",
-    artNo: "EI-WL-1013",
+    artNo: "EI-WL-1425",
     leatherType: "Full Grain Leather",
-    color: "Black",
+    color: "Cinnamon Brown",
     finish: "Matte Clean",
     description:
       "Slim leather phone wallet case with card slots and a magnetic closure for everyday minimal carry.",
     details: ["Phone slot", "3 card slots", "Magnetic close"],
     palette: ["#111111", "#4a4a4a", "#eeeeee"],
-    image: images.walletClean,
+    image: images.wl13,
     imageLabel: "Wallet / 13",
     imagePosition: "center center",
   },
@@ -1535,15 +983,15 @@ const walletTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Wallet",
     name: "Checkbook Wallet",
-    artNo: "EI-WL-1014",
-    leatherType: "Cowhide Leather",
-    color: "Cognac",
+    artNo: "EI-WL-3147",
+    leatherType: "aniline leather",
+    color: "Black",
     finish: "Natural Grain",
     description:
       "Long checkbook wallet with a snap closure and organized interior for financial documents and cards.",
     details: ["Checkbook pocket", "Snap close", "6 card slots"],
     palette: ["#9a6535", "#c8934f", "#f5ede0"],
-    image: images.walletFlatlay,
+    image: images.wl14,
     imageLabel: "Wallet / 14",
     imagePosition: "center center",
   },
@@ -1551,15 +999,15 @@ const walletTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Wallet",
     name: "Secretary Wallet",
-    artNo: "EI-WL-1015",
+    artNo: "EI-WL-7744",
     leatherType: "Vegetable Tanned Leather",
-    color: "Tan",
+    color: "Sand Beige",
     finish: "Dry Matte",
     description:
       "Large secretary-style wallet with a fold-over flap, bill section, and ample card storage.",
     details: ["Fold-over flap", "Bill section", "8+ slots"],
     palette: ["#b08040", "#d4a860", "#f8f0e0"],
-    image: images.walletClean,
+    image: images.wl15,
     imageLabel: "Wallet / 15",
     imagePosition: "center center",
   },
@@ -1570,7 +1018,7 @@ const beltTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Belt",
     name: "Perforated Belt",
-    artNo: "EI-BT-1613",
+    artNo: "EI-BT-2282",
     leatherType: "Smooth Calf Leather",
     color: "Black",
     finish: "Perforated Panel",
@@ -1578,7 +1026,7 @@ const beltTailProducts: ProductPage[] = [
       "Clean belt with a perforated panel pattern and a polished pin buckle for a fresh contemporary feel.",
     details: ["Perforated detail", "Pin buckle", "Even width"],
     palette: ["#0a0a0a", "#3d3d3d", "#f0f0f0"],
-    image: images.beltBlack,
+    image: images.blt6,
     imageLabel: "Belt / 13",
     imagePosition: "center center",
   },
@@ -1586,15 +1034,15 @@ const beltTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Belt",
     name: "Stitch Accent Belt",
-    artNo: "EI-BT-1614",
-    leatherType: "Full Grain Leather",
+    artNo: "EI-BT-8310",
+    leatherType: "aniline leather",
     color: "Brown",
     finish: "Contrast Stitch",
     description:
       "Wide belt with a contrasting topstitch accent and a solid brass square buckle for a bold everyday look.",
     details: ["Contrast stitch", "Square buckle", "Wide cut"],
     palette: ["#6b4020", "#9e6535", "#f5ede0"],
-    image: images.beltStyled,
+    image: images.blt7,
     imageLabel: "Belt / 14",
     imagePosition: "center center",
   },
@@ -1602,7 +1050,7 @@ const beltTailProducts: ProductPage[] = [
     page: 0,
     category: "Leather Belt",
     name: "Double Grommet Belt",
-    artNo: "EI-BT-1615",
+    artNo: "EI-BT-9736",
     leatherType: "Buff Leather",
     color: "Black",
     finish: "Matte Military",
@@ -1610,161 +1058,139 @@ const beltTailProducts: ProductPage[] = [
       "Punk-inspired double grommet belt with a matte surface and an oversized pin buckle for fashion-forward styling.",
     details: ["Double grommets", "Oversized buckle", "Fashion cut"],
     palette: ["#111111", "#555555", "#eeeeee"],
-    image: images.beltBlack,
+    image: images.blt8,
     imageLabel: "Belt / 15",
     imagePosition: "center center",
   },
 ];
 
-const shoesTailProducts: ProductPage[] = [
+const accessoryProducts: ProductPage[] = [
   {
     page: 0,
-    category: "Leather Shoes",
-    name: "Tassel Loafer",
-    artNo: "EI-SH-1913",
-    leatherType: "Smooth Calf Leather",
-    color: "Dark Brown",
-    finish: "Semi Gloss",
+    category: "Leather Accessories",
+    name: "Leather File Folder",
+    artNo: "EI-AC-1142",
+    leatherType: "aniline leather",
+    color: "Green",
+    finish: "Natural Matte",
     description:
-      "Heritage tassel loafer with a leather tassel trim and a clean last for smart casual dressing.",
-    details: ["Tassel trim", "Slip-on", "Leather sole"],
-    palette: ["#2a1200", "#6a3818", "#eeeeee"],
-    image: images.shoesBlack,
-    imageLabel: "Shoes / 13",
+      "A structured leather file folder for keeping documents organised — durable, professional, and built to last.",
+    details: ["A4 capacity", "Secure closure", "Card slot"],
+    palette: ["#7a4f2e", "#b07848", "#f5f0e8"],
+    image: images.acc1,
+    imageLabel: "Accessories / 01",
     imagePosition: "center center",
   },
   {
     page: 0,
-    category: "Leather Shoes",
-    name: "Side-Zip Boot",
-    artNo: "EI-SH-1914",
-    leatherType: "Burnished Calf Leather",
-    color: "Cognac",
-    finish: "Hand Burnished",
+    category: "Leather Accessories",
+    name: "Slim Card Holder",
+    artNo: "EI-AC-2387",
+    leatherType: "aniline leather",
+    color: "Green",
+    finish: "Burnished Edge",
     description:
-      "Sleek side-zip ankle boot with a tapered toe and a stacked block heel for refined everyday wear.",
-    details: ["Side zip", "Block heel", "Tapered toe"],
-    palette: ["#9a6535", "#c8934f", "#f5ede0"],
-    image: images.shoesBrown,
-    imageLabel: "Shoes / 14",
+      "A minimalist card holder engineered for everyday carry — slim enough to forget you have it.",
+    details: ["4-card capacity", "Centre slot", "Open top"],
+    palette: ["#c8974a", "#e8c080", "#f8f4ec"],
+    image: images.acc2,
+    imageLabel: "Accessories / 02",
     imagePosition: "center center",
   },
   {
     page: 0,
-    category: "Leather Shoes",
-    name: "Square Toe Mule",
-    artNo: "EI-SH-1915",
-    leatherType: "Smooth Nappa Leather",
-    color: "Black",
-    finish: "Polished Matte",
-    description:
-      "Contemporary square-toe mule with a low kitten heel and a clean backless silhouette for fashion collections.",
-    details: ["Square toe", "Kitten heel", "Backless"],
-    palette: ["#111111", "#4a4a4a", "#eeeeee"],
-    image: images.shoesFormal,
-    imageLabel: "Shoes / 15",
-    imagePosition: "center center",
-  },
-];
-
-const jacketTailProducts: ProductPage[] = [
-  {
-    page: 0,
-    category: "Leather Jacket",
-    name: "Belted Trench Jacket",
-    artNo: "EI-JK-2213",
-    leatherType: "Smooth Calf Leather",
-    color: "Camel",
-    finish: "Polished Smooth",
-    description:
-      "Structured leather trench with a self-tie belt, wide lapels, and a clean mid-length silhouette.",
-    details: ["Self-tie belt", "Wide lapel", "Mid length"],
-    palette: ["#c8984a", "#e8b878", "#f8f0e0"],
-    image: images.jacketClose,
-    imageLabel: "Jacket / 13",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Jacket",
-    name: "Collarless Blazer",
-    artNo: "EI-JK-2214",
-    leatherType: "Lamb Leather",
-    color: "Black",
-    finish: "Supple Matte",
-    description:
-      "Minimal collarless leather blazer with a clean placket and a relaxed refined silhouette.",
-    details: ["No collar", "Button placket", "Relaxed fit"],
-    palette: ["#111111", "#505050", "#f3f3f3"],
-    image: images.jacketStone,
-    imageLabel: "Jacket / 14",
-    imagePosition: "center center",
-  },
-  {
-    page: 0,
-    category: "Leather Jacket",
-    name: "Quilted Leather Jacket",
-    artNo: "EI-JK-2215",
-    leatherType: "Nappa Leather",
-    color: "Black",
-    finish: "Diamond Quilt",
-    description:
-      "Diamond-quilted leather jacket with a zip front and a padded feel for a bold statement outerwear look.",
-    details: ["Diamond quilt", "Zip front", "Padded look"],
-    palette: ["#131313", "#4a4a4a", "#f0f0f0"],
-    image: images.jacketNight,
-    imageLabel: "Jacket / 15",
-    imagePosition: "center center",
-  },
-];
-
-const glovesTailProducts: ProductPage[] = [
-  {
-    page: 0,
-    category: "Leather Gloves",
-    name: "Wrist Strap Gloves",
-    artNo: "EI-GL-2513",
-    leatherType: "Nappa Leather",
-    color: "Black",
+    category: "Leather Accessories",
+    name: "Business Card Holder",
+    artNo: "EI-AC-3054",
+    leatherType: "aniline leather",
+    color: "Blue",
     finish: "Soft Smooth",
     description:
-      "Sleek gloves with an adjustable wrist strap and a clean minimal silhouette for everyday urban use.",
-    details: ["Wrist strap", "Minimal seam", "Snug fit"],
-    palette: ["#111111", "#484848", "#f2f2f2"],
-    image: images.glovesDetail,
-    imageLabel: "Gloves / 13",
+      "A refined business card holder that keeps cards pristine and presentations sharp.",
+    details: ["20-card capacity", "Magnetic closure", "Nappa lining"],
+    palette: ["#1a1a1a", "#3a3a3a", "#f0f0f0"],
+    image: images.acc3,
+    imageLabel: "Accessories / 03",
     imagePosition: "center center",
   },
   {
     page: 0,
-    category: "Leather Gloves",
-    name: "Lined Riding Gloves",
-    artNo: "EI-GL-2514",
-    leatherType: "Cowhide Leather",
-    color: "Dark Brown",
-    finish: "Structured Grip",
+    category: "Leather Accessories",
+    name: "Leather Key Holder",
+    artNo: "EI-AC-4761",
+    leatherType: "aniline leather",
+    color: "Green",
+    finish: "Matte Pull-Up",
     description:
-      "Equestrian-inspired riding gloves with a structured grip palm and a knuckle roll for a heritage look.",
-    details: ["Grip palm", "Knuckle roll", "Lined interior"],
-    palette: ["#2c1a0a", "#6e4028", "#f0ece8"],
-    image: images.glovesStudio,
-    imageLabel: "Gloves / 14",
+      "A compact key holder with swing-out hooks that keep keys silent and scratch-free.",
+    details: ["4-key hooks", "Snap closure", "Brass hardware"],
+    palette: ["#2c1a0a", "#5c3820", "#e8ddd0"],
+    image: images.acc4,
+    imageLabel: "Accessories / 04",
     imagePosition: "center center",
   },
   {
     page: 0,
-    category: "Leather Gloves",
-    name: "Knit Back Gloves",
-    artNo: "EI-GL-2515",
-    leatherType: "Sheep Leather",
-    color: "Black",
-    finish: "Knit Panel Back",
+    category: "Leather Accessories",
+    name: "Toiletry Pouch",
+    artNo: "EI-AC-5293",
+    leatherType: "aniline leather",
+    color: "Green",
+    finish: "Smooth Polished",
     description:
-      "Hybrid gloves combining a smooth leather palm with a stretch knit back panel for comfort and flexibility.",
-    details: ["Knit back", "Leather palm", "Stretch fit"],
-    palette: ["#0d0d0d", "#3a3a3a", "#efefef"],
-    image: images.glovesDetail,
-    imageLabel: "Gloves / 15",
+      "A spacious leather toiletry pouch with a waterproof lining — travel-ready and elegantly finished.",
+    details: ["Zip closure", "Waterproof lining", "Interior pockets"],
+    palette: ["#4a5030", "#788050", "#f0f0e8"],
+    image: images.acc5,
+    imageLabel: "Accessories / 05",
+    imagePosition: "center center",
+  },
+  {
+    page: 0,
+    category: "Leather Accessories",
+    name: "Bag Charm",
+    artNo: "EI-AC-6018",
+    leatherType: "Full Grain Leather",
+    color: "Cognac",
+    finish: "Natural Matte",
+    description:
+      "A hand-stitched leather bag charm that adds a personal touch to any tote or handbag.",
+    details: ["Lobster clasp", "Hand-stitched", "Solid brass hardware"],
+    palette: ["#7a4f2e", "#b07848", "#f5f0e8"],
+    image: images.acc6,
+    imageLabel: "Accessories / 06",
+    imagePosition: "center center",
+  },
+  {
+    page: 0,
+    category: "Leather Accessories",
+    name: "Card Case",
+    artNo: "EI-AC-7435",
+    leatherType: "Nappa Leather",
+    color: "Red",
+    finish: "Soft Smooth",
+    description:
+      "A vibrant red card case that holds essentials without the bulk — a bold everyday essential.",
+    details: ["6-card capacity", "Snap closure", "Slim profile"],
+    palette: ["#9b1c1c", "#c83232", "#faeaea"],
+    image: images.acc7,
+    imageLabel: "Accessories / 07",
+    imagePosition: "center center",
+  },
+  {
+    page: 0,
+    category: "Leather Accessories",
+    name: "Phone Case",
+    artNo: "EI-AC-8826",
+    leatherType: "Full Grain Leather",
+    color: "Oxblood",
+    finish: "Matte Pull-Up",
+    description:
+      "A full grain leather phone case in deep oxblood — protective, refined, and built to age beautifully.",
+    details: ["Precise cutouts", "Card slot", "Drop protection"],
+    palette: ["#4a0a0a", "#7a1a1a", "#f8eaea"],
+    image: images.acc8,
+    imageLabel: "Accessories / 08",
     imagePosition: "center center",
   },
 ];
@@ -1781,21 +1207,7 @@ const productCollections = {
     ...beltExtraProducts,
     ...beltTailProducts,
   ],
-  "Leather Shoes": [
-    ...shoesCoreProducts,
-    ...shoesExtraProducts,
-    ...shoesTailProducts,
-  ],
-  "Leather Jacket": [
-    ...jacketCoreProducts,
-    ...jacketExtraProducts,
-    ...jacketTailProducts,
-  ],
-  "Leather Gloves": [
-    ...glovesCoreProducts,
-    ...glovesExtraProducts,
-    ...glovesTailProducts,
-  ],
+  "Leather Accessories": accessoryProducts,
 } satisfies Record<ProductCategory, ProductPage[]>;
 
 const whyChooseUs = [
@@ -1807,7 +1219,7 @@ const whyChooseUs = [
 
 const contactDetails = [
   "Proprietor: Mr. Kamal Aktar",
-  "Phone: +91 9564117600",
+  "Phone: +91 9883295681",
   "Mail: info@euro-intl.com",
   "Mail: dev.eurointarnational@gmail.com",
   "Office: Block-A, 1st Floor, 4A, G.J. Khan Road, Kolkata-700039, West Bengal, India",
@@ -2032,7 +1444,7 @@ function SummaryPage() {
           <div className="mt-4 min-h-0 flex-1">
             <div className="relative h-full overflow-hidden bg-[#f0efec]">
               <Image
-                src={images.bagStudio}
+                src={images.aboutus}
                 alt="Leather goods editorial display"
                 fill
                 unoptimized
@@ -2171,7 +1583,7 @@ function AboutPage() {
                 className="mt-3 max-w-[88%] uppercase leading-[0.92] tracking-[-0.03em] text-white/92"
                 style={{
                   fontFamily: bodoniModa.style.fontFamily,
-                  fontSize: "2.85rem",
+                  fontSize: "2.25rem",
                 }}
               >
                 Euro
@@ -2913,15 +2325,24 @@ function ProductSectionThreeUp({
                   </p>
                 </div>
 
-                {/* Options */}
                 <div>
-                  <p className="text-[0.44rem] uppercase tracking-[0.28em] text-black/34">
-                    Option
-                  </p>
-                  <p className="mt-[0.2rem] text-[0.58rem] leading-[1.5] text-black/46">
-                    {item.details.join(", ")}
-                  </p>
+                <div className="mt-[0.6rem] space-y-[0.14rem]">
+                  {[
+                    { label: "Art No.", value: item.artNo },
+                    { label: "Leather", value: item.leatherType },
+                    { label: "Colour", value: item.color },
+                  ].map(({ label, value }) => (
+                    <p
+                      key={label}
+                      className="text-[0.6rem] uppercase tracking-[0.18em] leading-normal"
+                    >
+                      <span className="text-black/32">{label}</span>
+                      {"  "}
+                      <span className="text-black/62">{value}</span>
+                    </p>
+                  ))}
                 </div>
+              </div>
               </div>
             </article>
           ))}
@@ -2986,16 +2407,15 @@ function ContactPage() {
       label: "Direct",
       lines: [
         "Proprietor: Mr. Kamal Aktar",
-        "Phone: +91 9564117600",
+        "Phone: +91 9883295681",
         "Mail: info@euro-intl.com",
-        "Mail: dev.eurointarnational@gmail.com",
       ],
     },
     {
-      label: "Office",
+      label: "Tannery",
       lines: [
-        "Block-A, 1st Floor, 4A",
-        "G.J. Khan Road, Kolkata-700039",
+        "PLOT : 98, ZONE - 10A,",
+        "KOLKATA LEATHER COMPLEX,South 24 Pargana,",
         "West Bengal, India",
       ],
     },
@@ -3010,7 +2430,7 @@ function ContactPage() {
   ];
 
   return (
-    <PageShell page={34}>
+    <PageShell page={22}>
       <div className="h-full px-[8%] pb-12 pt-8">
         <div className="flex items-center justify-between text-[0.68rem] uppercase tracking-[0.3em] text-black/48">
           <span>www.euro-intl.com</span>
@@ -3095,7 +2515,7 @@ function ContactPage() {
               </div>
               <div className="mt-3 flex items-center justify-between bg-[#f4f4f4] px-4 py-3 text-[0.78rem] uppercase tracking-[0.24em] text-black/60">
                 <span>www.euro-intl.com</span>
-                <span>+91 9564117600</span>
+                <span>+91 9883295681</span>
               </div>
             </div>
           </div>
@@ -3152,80 +2572,34 @@ export default function Home() {
           page={13}
         />
 
-        {/* Belt: pages 14–18 */}
-        <ProductSection items={by("Leather Belt").slice(0, 1)} page={14} />
+        {/* Accessories: pages 14–16  (1 hero + 3-up + 4-up = 8 products) */}
+        <ProductSection items={by("Leather Accessories").slice(0, 1)} page={14} />
         <ProductSectionThreeUp
-          items={by("Leather Belt").slice(1, 4)}
+          items={by("Leather Accessories").slice(1, 4)}
           page={15}
         />
         <ProductSectionFourUp
-          items={by("Leather Belt").slice(4, 8)}
+          items={by("Leather Accessories").slice(4, 8)}
           page={16}
+        />
+
+        {/* Belt: pages 17–21 */}
+        <ProductSection items={by("Leather Belt").slice(0, 1)} page={17} />
+        <ProductSectionThreeUp
+          items={by("Leather Belt").slice(1, 4)}
+          page={18}
+        />
+        <ProductSectionFourUp
+          items={by("Leather Belt").slice(4, 8)}
+          page={19}
         />
         <ProductSectionThreeUp
           items={by("Leather Belt").slice(8, 11)}
-          page={17}
-        />
-        <ProductSectionFourUp
-          items={by("Leather Belt").slice(11, 15)}
-          page={18}
-        />
-
-        {/* Shoes: pages 19–23 */}
-        <ProductSection items={by("Leather Shoes").slice(0, 1)} page={19} />
-        <ProductSectionThreeUp
-          items={by("Leather Shoes").slice(1, 4)}
           page={20}
         />
         <ProductSectionFourUp
-          items={by("Leather Shoes").slice(4, 8)}
+          items={by("Leather Belt").slice(11, 15)}
           page={21}
-        />
-        <ProductSectionThreeUp
-          items={by("Leather Shoes").slice(8, 11)}
-          page={22}
-        />
-        <ProductSectionFourUp
-          items={by("Leather Shoes").slice(11, 15)}
-          page={23}
-        />
-
-        {/* Jacket: pages 24–28 */}
-        <ProductSection items={by("Leather Jacket").slice(0, 1)} page={24} />
-        <ProductSectionThreeUp
-          items={by("Leather Jacket").slice(1, 4)}
-          page={25}
-        />
-        <ProductSectionFourUp
-          items={by("Leather Jacket").slice(4, 8)}
-          page={26}
-        />
-        <ProductSectionThreeUp
-          items={by("Leather Jacket").slice(8, 11)}
-          page={27}
-        />
-        <ProductSectionFourUp
-          items={by("Leather Jacket").slice(11, 15)}
-          page={28}
-        />
-
-        {/* Gloves: pages 29–33 */}
-        <ProductSection items={by("Leather Gloves").slice(0, 1)} page={29} />
-        <ProductSectionThreeUp
-          items={by("Leather Gloves").slice(1, 4)}
-          page={30}
-        />
-        <ProductSectionFourUp
-          items={by("Leather Gloves").slice(4, 8)}
-          page={31}
-        />
-        <ProductSectionThreeUp
-          items={by("Leather Gloves").slice(8, 11)}
-          page={32}
-        />
-        <ProductSectionFourUp
-          items={by("Leather Gloves").slice(11, 15)}
-          page={33}
         />
 
         <ContactPage />
@@ -3233,3 +2607,45 @@ export default function Home() {
     </main>
   );
 }
+/*
+#cc9446
+#7a958c
+#2e2e2f
+#434241
+#56573f
+#55393a
+#9fb6bd
+#4f3f38
+#33312f
+#6f4c40
+#212320
+#513329
+#36433a
+#5e4138
+#9b7c70
+#a37564
+#b06651
+#4f4b3f
+#8f5741
+#945041
+#7c4740
+#5b4a43
+#4f3833
+#c05a32
+#313135
+#372722
+#706f6d
+#91584d
+#aa634d
+#d0bba9
+#216985
+#a0604e
+#b57051
+#ad682f
+#ceaea5
+#9f8083
+#bd6042
+#94461d
+#6b3c39
+#4b312f
+*/
